@@ -1,0 +1,26 @@
+.Naat-title {
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Noto Nastaliq Urdu', serif;
+    padding: 0;
+    white-space: nowrap;
+    color: #007bff;
+}
+
+.padh-title {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    white-space: nowrap;
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:320px) {
+    .padh-title {
+        font-family: 'Noto Nastaliq Urdu', serif;
+        white-space: nowrap;
+        font-size: 16px;
+        color: red;
+        font-weight: bold;
+    }   
+}

@@ -1,14 +1,374 @@
-<!doctype html>
-<html lang="en" data-critters-container>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>AngularProject1</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-black:#000;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-primary-text-emphasis:#052c65;--bs-secondary-text-emphasis:#2b2f32;--bs-success-text-emphasis:#0a3622;--bs-info-text-emphasis:#055160;--bs-warning-text-emphasis:#664d03;--bs-danger-text-emphasis:#58151c;--bs-light-text-emphasis:#495057;--bs-dark-text-emphasis:#495057;--bs-primary-bg-subtle:#cfe2ff;--bs-secondary-bg-subtle:#e2e3e5;--bs-success-bg-subtle:#d1e7dd;--bs-info-bg-subtle:#cff4fc;--bs-warning-bg-subtle:#fff3cd;--bs-danger-bg-subtle:#f8d7da;--bs-light-bg-subtle:#fcfcfd;--bs-dark-bg-subtle:#ced4da;--bs-primary-border-subtle:#9ec5fe;--bs-secondary-border-subtle:#c4c8cb;--bs-success-border-subtle:#a3cfbb;--bs-info-border-subtle:#9eeaf9;--bs-warning-border-subtle:#ffe69c;--bs-danger-border-subtle:#f1aeb5;--bs-light-border-subtle:#e9ecef;--bs-dark-border-subtle:#adb5bd;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-color-rgb:33,37,41;--bs-body-bg:#fff;--bs-body-bg-rgb:255,255,255;--bs-emphasis-color:#000;--bs-emphasis-color-rgb:0,0,0;--bs-secondary-color:rgba(33, 37, 41, .75);--bs-secondary-color-rgb:33,37,41;--bs-secondary-bg:#e9ecef;--bs-secondary-bg-rgb:233,236,239;--bs-tertiary-color:rgba(33, 37, 41, .5);--bs-tertiary-color-rgb:33,37,41;--bs-tertiary-bg:#f8f9fa;--bs-tertiary-bg-rgb:248,249,250;--bs-heading-color:inherit;--bs-link-color:#0d6efd;--bs-link-color-rgb:13,110,253;--bs-link-decoration:underline;--bs-link-hover-color:#0a58ca;--bs-link-hover-color-rgb:10,88,202;--bs-code-color:#d63384;--bs-highlight-bg:#fff3cd;--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#dee2e6;--bs-border-color-translucent:rgba(0, 0, 0, .175);--bs-border-radius:.375rem;--bs-border-radius-sm:.25rem;--bs-border-radius-lg:.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-xxl:2rem;--bs-border-radius-2xl:var(--bs-border-radius-xxl);--bs-border-radius-pill:50rem;--bs-box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);--bs-box-shadow-sm:0 .125rem .25rem rgba(0, 0, 0, .075);--bs-box-shadow-lg:0 1rem 3rem rgba(0, 0, 0, .175);--bs-box-shadow-inset:inset 0 1px 2px rgba(0, 0, 0, .075);--bs-focus-ring-width:.25rem;--bs-focus-ring-opacity:.25;--bs-focus-ring-color:rgba(13, 110, 253, .25);--bs-form-valid-color:#198754;--bs-form-valid-border-color:#198754;--bs-form-invalid-color:#dc3545;--bs-form-invalid-border-color:#dc3545}*,:after,:before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}:root{--bs-breakpoint-xs:0;--bs-breakpoint-sm:576px;--bs-breakpoint-md:768px;--bs-breakpoint-lg:992px;--bs-breakpoint-xl:1200px;--bs-breakpoint-xxl:1400px}:root{scroll-behavior:smooth}body{font-family:Open Sans,sans-serif;background:#f6f9ff;color:#444}
-</style><link rel="stylesheet" href="styles-BESCT3FX.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-BESCT3FX.css"></noscript></head>
-<body>
-  <app-root></app-root>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-4WJXLKPK.js" defer></script><script src="main-7BGO4ZFQ.js" type="module"></script></body>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NewBiz Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/MiladSharif.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@600&family=Noto+Nastaliq+Urdu&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="./assets/vendor/FontAwesome/font-awesome.css">
+  <link rel="stylesheet" href="./assets/vendor/FontAwesome/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="myFunction()">
+
+  <div id="loader">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+    <div class="six"></div>
+    <div class="seven"></div>
+    <div class="eight"></div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <!-- Uncomment below if you prefer to use an text logo -->
+        <!-- <h1><a href="index.html">NewBiz</a></h1> -->
+        <a href="index.html" onclick="DBlockFunction()"><img src="assets/images/MiladSharif-Title.png" alt=""
+            class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar" dir="rtl">
+        <ul>
+          <li><a class="nav-link scrollto active" href="MiladIndex.html" onclick="DBlockFunction()">Home</a></li>
+          <li><a class="nav-link scrollto arbic-nav" href="MiladSharif.html" onclick="DBlockFunction()"> ميٖلاد شريٖف
+            </a></li>
+          <li><a class="nav-link scrollto" href="GyarviSharif.html" onclick="DBlockFunction()"> گیارہویں شریف </a></li>
+          <li class="dropdown"><a href="#"><span> ختم قادریہ شریف </span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="KhatmeGausia/KhatmeQadria.html" class="arbic-nav" onclick="DBlockFunction()"> ختم قادریہ شریف
+                </a></li>
+              <li><a href="KhatmeGausia/YaseenSharif.html" class="arbic-nav" onclick="DBlockFunction()"> سوره یاسین شریف
+                </a></li>
+              <li><a href="KhatmeGausia/QasideGausia.html" class="arbic-nav" onclick="DBlockFunction()"> قصیدہ غوثیہ
+                  شریف </a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto " href="Tahleel.html" onclick="DBlockFunction()"> تہلیل </a></li>
+          <li><a class="nav-link scrollto " href="Hamd.html" onclick="DBlockFunction()"> حمد </a></li>
+          <li><a class="nav-link scrollto " href="Naat.html" onclick="DBlockFunction()"> نعتِ رَسُول ﷺ </a></li>
+          <li><a class="nav-link scrollto " href="Manqabat.html" onclick="DBlockFunction()"> منقبت </a></li>
+          <li><a class="nav-link scrollto " href="Rifai.html" onclick="DBlockFunction()"> رفائی </a></li>
+          <li><a class="nav-link scrollto " href="Chehallam.html" onclick="DBlockFunction()"> چہلم قصيِده </a></li>
+          <li><a class="nav-link scrollto " href="About.html" onclick="DBlockFunction()"> About Us </a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container" data-aos="fade-up">
+
+      <div class="hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <!-- <img src="assets/img/hero-img.svg" alt="" class="img-fluid"> -->
+      </div>
+
+      <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
+        <!-- <h2>We provide<br><span>solutions</span><br>for your business!</h2> -->
+        <h2> ﷽ <br>
+          <!-- <span>solutions</span> -->
+          <span> </span>
+          <!-- <br>for your business!</h2> -->
+          <!-- <br> In the name of “Allah” <br> Come to the straight path </h2> -->
+          <!-- <br> Come to the straight path </h2> -->
+        </h2>
+        <br>
+        <div>
+          <h4 class="text-white"> In the name of “Allah” </h4>
+          <h1 class="comestraight font-weight-bold"> Come to the straight path </h2>
+        </div>
+
+        <div>
+          <a href="MiladIndex.html" onclick="DBlockFunction()" class="btn-get-started">Get Started</a>
+          <a href="#services" class="btn-services scrollto">Our Services</a>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+
+        <!-- <header class="section-header">
+          <h3>About Us</h3>
+          <p class="About">
+            This Durood belongs to Hazrat Ghous Saqlain Mehboob Subhani Syedna and Maulana Mohi-ud-Din Syed Abdul Qadir
+            Jilani Quddus Sirah, since it is recited on the 11th of every month. That is why it is called Giarvih. It is
+            necessary for the readers to go in absolute clean manner and read happily in well mannered way and submit it
+            to the soul of Hazrat Ghous E Azam so that the readers and listeners will both be benefited with the good
+            deeds of it.
+          </p>
+        </header> -->
+
+        <header class="section-header">
+          
+        </header>
+
+
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <br>
+        
+            <h5 class="text-center">
+            I have created Milad Sharif app with lot of diligence, yet there is possibility of mistakes.
+            If any scholar amongst you identify any mistakes in it please let me know so that I can work on it and try
+            to rectify.
+            <!-- <br>            -->
+         
+          </h5>
+          <div class="text-center">
+            <span class="text-secondary"> Contact Me. </span>
+            <br>
+            <span class="font-bold text-secondary">Hussain Amjad Shaikh</span>
+            <br>
+            <span class="text-secondary"> ( md.husain0786@outlook.com ) </span>
+           </div>
+          <br>
+          <br>
+          
+          <h4 class="arbicfonts text-center text-black">
+            انسان غلطیوں کا پُتلا ہے
+            <br>
+            <br>
+            غلطیاں انسان سے ہی ہوتی ہے
+            <br>
+            <br>
+            یہ ( ایپ ) پُری محنت سے تیّار کِیا گیا ہیں
+            <br>
+            <br>
+            پھر بھی غلطی کے اِمکان ہیں۔
+            <br>
+            <br>
+            اگرچہ کسی أہل علم کی نظر سے کوئی غلطی نظر آئے
+            <br>
+            <br>
+            تو برائے مہربانی میری اصلاح فرمایئے
+            <br>
+            <br>
+            مُجھسے رابطہ کریں نوازش ہوگی۔
+            <br>
+            <br>
+            فقط طالبِ دعا
+            <br>            
+            <br>
+            <br>
+           <span class="husain"> حُسیٖن امجد شیخ</span>
+           <br>
+           <!-- <br>
+           <br> -->
+           <!-- <span class="text-secondary"> Contact Me. </span>
+           <br>
+           <span class="text-secondary"> ( md.husain0786@outlook.com ) </span> -->
+            
+          </h4>
+          <!-- <p class="About ">
+           
+          </p> -->
+        </header>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="section-bg" dir="rtl">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <!-- <h3>Services</h3>
+          <p></p> -->
+        </header>
+
+        <div class="row justify-content-center">
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="MiladSharif.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  ميٖلاد شريٖف </h1>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="GyarviSharif.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  گیارہویں شریف </h1>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="Tahleel.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  تہلیل </h1>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="KhatmeQadria.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  ختم قادریہ شریف </h1>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="Hamd.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  حمد </h1>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="Naat.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  نعتِ رَسُول ﷺ </h1>
+              </a>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="Manqabat.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  منقبت </h1>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="Rifai.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  رفائی </h1>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <a href="Chehallam.html" onclick="myFunction()">
+                <h1 class="header-title"><i class="fa fa-asterisk fa-4" style="color: #ff689b; margin-top:2px;"></i>
+                  چہلم قصيِده </h1>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="copyright">
+            &copy; Copyright <strong>Milad Sharif</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="./mdhusain/Index.html" onclick="DBlockFunction()">Md.Hussain</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+
+  <!-- --- pre loader --- -->
+
+  <script>
+
+    function myFunction() {
+      setTimeout("", "5000");
+      var PreLoader = document.getElementById('loader');
+      PreLoader.style.display = 'none';
+    }
+
+  </script>
+
+  <!-- --- pre loader --- -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
